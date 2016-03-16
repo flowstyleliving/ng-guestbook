@@ -1,0 +1,36 @@
+<div style="text-align: center;">
+  <h1>Add Guest</h1>
+</div>
+
+<form class="well container" ng-submit="vm.guestAdd()">
+  <div class="row container">
+    <div class="col col-sm-1">
+      <label>Author: </label>
+    </div>
+    <div class="col col-sm-6">
+      <input type="text" ng-model="vm.guest.author" class="form-control"/>
+    </div>
+  </div>
+  <br>
+    <div class="row container">
+      <div class="col col-sm-1">
+        <label>Date: </label>
+      </div>
+      <div class="col col-sm-6">
+        <input type="date" ng-model="vm.guest.dateCreated" class="form-control"/>
+      </div>
+    </div>
+  <br>
+  <div class="row container">
+    <div class="col col-sm-1">
+      <label>Message: </label>
+    </div>
+    <div class="col col-sm-6">
+      <input type="text" ng-model="vm.guest.message" class="form-control"/>
+    </div>
+  </div>
+
+  <div class="text-align: center;">
+    <button type="submit" class="btn btn-success">Submit</button>
+  </div>
+</form>

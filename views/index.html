@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+  <title>coder-camps-js</title>
+  <meta charset="utf-8">
+  <base href="/" />
+  <link rel="stylesheet" href="/scripts/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://bootswatch.com/superhero/bootstrap.min.css"/>
+</head>
+
+<body>
+  <div class="well">
+    <span style="font-family: futura; font-weight: bold; font-size: 14pt;">guest<a ui-sref="Home">(Book)</a></span>
+    &nbsp;&nbsp;&nbsp;
+    <a ui-sref="guestAdd">Add(+)</a>
+  </div>
+
+  <ui-view></ui-view>
+
+  <script src='/scripts/angular/angular.min.js'></script>
+  <script src='/scripts/angular-resource/angular-resource.min.js'></script>
+  <script src='/scripts/angular-ui-router/release/angular-ui-router.min.js'></script>
+
+  <script src="/js/app.js"></script>
+  <script src="/js/services/services.js"></script>
+  <script src="/js/controllers/controllers.js"></script>
+  <script src="/js/controllers/GuestAddController.js"></script>
+
+
+</body>
+
+</html>

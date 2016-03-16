@@ -1,0 +1,16 @@
+<div class="container">
+  <div ng-repeat="g in vm.guests">
+    <div class="well">
+      <div class="row">
+        <div class="col col-sm-1"> {{ g.id }} </div>
+        <div class="col col-sm-2"> {{ g.author }}</div>
+        <div class="col col-sm-3"> {{ g.dateCreated }} </div>
+        <div class="col col-sm-3"> {{ g.message}} </div>
+        <div class="col col-sm-3">
+          <button type="button" class="btn btn-danger" ng-click="vm.deleteGuest(g)">Delete</button>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>
+</div>
