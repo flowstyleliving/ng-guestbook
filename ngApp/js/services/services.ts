@@ -15,6 +15,10 @@ namespace app.Services {
       return this.GuestResource.query();
     }
 
+    public getAllSync() {
+      return this.GuestResource.query().$promise;
+    }
+    
     public getGuest(id: number) {
       return this.GuestResource.get({id: id});
     }

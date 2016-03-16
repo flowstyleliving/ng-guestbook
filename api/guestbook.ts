@@ -13,8 +13,11 @@ let entryId = entries.length;
 
 /* GET movies */
 router.get('/guestbook', function(req, res, next) {
-  res.json(entries);
+  setTimeout(function() {
+      res.json(entries);
+}, 3000);
 });
+
 
 /* GET entry by id */
 router.get('/guestbook/:id', function(req, res, next) {
