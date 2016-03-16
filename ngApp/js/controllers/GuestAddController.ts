@@ -10,6 +10,7 @@ namespace app.Controllers {
       })
     }
     constructor(private GuestService: app.Services.GuestService, private $state: ng.ui.IStateService) {
+
     }
   }
   angular.module('app').controller('GuestAddController', GuestAddController);

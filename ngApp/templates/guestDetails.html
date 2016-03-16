@@ -1,0 +1,24 @@
+<div style="text-align: center;">
+  <h2>{{vm.guest.author}}</h2>
+</div>
+<br>
+<div class="container">
+  <u>Created:</u>&nbsp;&nbsp;&nbsp; {{vm.guest.dateCreated | date: "medium"}}
+</div>
+<br>
+<div class="row">
+  <div class="container">
+    <p><u>
+  Message:
+</u></p>
+    <div class="well container">
+      {{vm.guest.message}}
+    </div>
+  </div>
+</div>
+<div class="container">
+<div class="text-align: center;">
+  <button ui-sref="guestEdit({id:vm.guest.id})" class="btn btn-warning">Edit</button>
+  <!-- <button ng-click="delete({id:vm.guest.id})" class="btn btn-danger">Delete</button> -->
+</div>
+</div>

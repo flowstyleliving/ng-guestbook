@@ -1,9 +1,6 @@
 namespace app.Services {
-  interface IGuestResourceClass extends ng.resource.IResource<IGuestResourceClass> {
-    id: number;
-    author: string;
-    dateCreated: string;
-    message: string;
+  interface IGuestResourceClass extends ng.resource.IResource<IGuestResourceClass>, app.Interfaces.IGuest {
+
   }
 
   interface IGuestResource extends ng.resource.IResourceClass<IGuestResourceClass> {
@@ -11,18 +8,23 @@ namespace app.Services {
   }
 
   export class GuestService {
-    private GuestResource: ng.resource.IResourceClass<IGuestResourceClass>;
+    private GuestResource: IGuestResource;
 
     public getAll() {
       //GET
       return this.GuestResource.query();
     }
 
-    // public getGuest() {
-    //   return this.GuestResource.get({id: id});
-    // }
+    public getGuest(id: number) {
+      return this.GuestResource.get({id: id});
+    }
 
     public add(guest: app.Interfaces.IGuest) {
+      guest.dateCreated = new Date();
+      return this.GuestResource.save(guest).$promise;
+    }
+
+    public edit(guest: app.Interfaces.IGuest) {
       return this.GuestResource.save(guest).$promise;
     }
 

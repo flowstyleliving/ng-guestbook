@@ -22,6 +22,19 @@ namespace app {
       controller: 'GuestAddController',
       controllerAs: 'vm'
     })
+    .state('guestDetails', {
+      url:'/details/:id',
+      templateUrl: 'templates/guestDetails.html',
+      controller: "GuestDetailsController",
+      controllerAs: 'vm'
+    })
+    .state('guestEdit', {
+      url:'/edit/:id',
+      templateUrl: 'templates/guestEdit.html',
+      controller: "GuestEditController",
+      controllerAs: 'vm'
+    })
+    
     $urlRouterProvider.otherwise('/');
     $locationProvider.html5Mode(true);
   });

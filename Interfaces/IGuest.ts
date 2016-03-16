@@ -2,7 +2,7 @@ namespace app.Interfaces {
   export interface IGuest {
     id: number;
     author: string;
-    dateCreated: string;
+    dateCreated: Date;
     message: string;
   }
 
